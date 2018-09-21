@@ -71,9 +71,6 @@ int main()
 
 			if (withdraw <= 300 && withdraw >= 1) // Checks whether the user's value to withdraw is within the allowed withdrawl range
 			{
-				cout << " You've chosen to withdraw $" << withdraw << endl;
-				cout << "" << endl;
-
 				// Calculates the amount of dollars dispense based on user's input
 				Fifties = withdraw / 50;		  
 				balance = withdraw - (Fifties * 50);
@@ -86,7 +83,7 @@ int main()
 				Ones = balance / 1;
 				balance = balance - (Ones * 1);
 
-				cout << " Your withdrawl then breaks down to: " << endl << endl;;
+				cout << " Your $" << withdraw << " withdrawl then breaks down to: " << endl << endl;;
 				cout << "" << endl;
 				cout << "\t =======================";
 				cout << "" << endl;
@@ -135,7 +132,7 @@ int main()
 	}
 
 	// Exits the program if 'n' or 'N' is entered
-	cout << " Ending your transaction!  Thank you for using the service ^.^" << endl;			
+	cout << " Ending your ATM transaction.  Thank you for using the service!" << endl;			
 	cout << endl;
 	system("pause");
 	return 0;
