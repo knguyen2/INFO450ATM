@@ -69,7 +69,7 @@ int main()
 			cin >> withdraw;
 			cout << "" << endl;
 
-			if (withdraw <= 300 && withdraw >= 1) // Checks whether the user's value to withdraw is within the allowed withdrawl range
+			if (withdraw <= 300 && withdraw >= 1) // Checks whether the user's value to withdraw is within the allowed withdrawl range and loops until a valid input is entered
 			{
 				// Calculates the amount of dollars dispense based on user's input
 				Fifties = withdraw / 50;		  
