@@ -49,13 +49,13 @@ int main()
 {
 	char answer = 'Y';
 	double withdraw = 0;
-	int balance, Fifties, Twenties, Tens, Fives, Ones;
+	int bill, Fifties, Twenties, Tens, Fives, Ones;
 
 	cout << "" << endl;
 	cout << " Hello valued customer!" << endl << endl;
 	cout << " Are you looking to withdraw from this ATM machine? Let me help!" << endl;
 	cout << "" << endl;
-	cout << " ***** Please remember: This ATM machine can only handle withdrawl of at least $1 and no more than $300 ***** " << endl;
+	cout << " ***** Please remember: This ATM machine can ONLY handle withdrawl of at least $1 and no more than $300 ***** " << endl;
 	cout << "" << endl;
 	cout << " ======================================================== " << endl;
 	cout << "" << endl;
@@ -73,51 +73,51 @@ int main()
 			{
 				// Calculates the amount of dollars dispense based on user's input
 				Fifties = withdraw / 50;		  
-				balance = withdraw - (Fifties * 50);
-				Twenties = balance / 20;
-				balance = balance - (Twenties * 20);
-				Tens = balance / 10;
-				balance = balance - (Tens * 10);
-				Fives = balance / 5;
-				balance = balance - (Fives * 5);
-				Ones = balance / 1;
-				balance = balance - (Ones * 1);
+				bill = withdraw - (Fifties * 50);
+				Twenties = bill / 20;
+				bill = bill - (Twenties * 20);
+				Tens = bill / 10;
+				bill = bill - (Tens * 10);
+				Fives = bill / 5;
+				bill = bill - (Fives * 5);
+				Ones = bill / 1;
+				bill = bill - (Ones * 1);
 
-				cout << " Your $" << withdraw << " withdrawl then breaks down to: " << endl << endl;;
+				cout << " Your $" << withdraw << " withdrawl consists of: " << endl << endl;;
 				cout << "" << endl;
-				cout << "\t =======================";
+				cout << "\t =================================";
 				cout << "" << endl;
 
 				// nested if condition to cycle through each type of bill and returns the amount of bills if the value exceeds $0
 				if (Fifties >= 1)				
 				{
-					cout << "\n\t You have " << Fifties << " $50 bills: " << endl;
+					cout << "\n\t\t " << Fifties << "\t $50 bills " << endl;
 				}
 
 				if (Twenties >= 1)
 				{
-					cout << "\n\t You have " << Twenties << " $20 bills: " << endl;
+					cout << "\n\t\t " << Twenties << "\t $20 bills " << endl;
 				}
 
 				if (Tens >= 1)
 				{
-					cout << "\n\t You have " << Tens << " $10 bills: " << endl;
+					cout << "\n\t\t " << Tens << "\t $10 bills " << endl;
 				}
 
 				if (Fives >= 1)
 				{
-					cout << "\n\t You have " << Fives << " $5 bills: " << endl;
+					cout << "\n\t\t " << Fives << "\t $5 bills " << endl;
 				}
 
 				if (Ones >= 1)
 				{
-					cout << "\n\t You have " << Ones << " $1 bills: " << endl;
+					cout << "\n\t\t " << Ones << "\t $1 bills " << endl;
 				}
-				cout << "\n\t =======================" << endl;
+				cout << "\n\t =================================" << endl;
 			}
 			else
 			{
-				cout << " Invalid amount entered.  Remember? The minimum withdraw is $1.00 & the maximum is $300.00.  Please try again :) " << endl;
+				cout << " Invalid amount.  Remember? The minimum withdraw is $1.00 & the maximum is $300.00.  Please try again :) " << endl;
 				cout << "" << endl;
 			}
 		}
